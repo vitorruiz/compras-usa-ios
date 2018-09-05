@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		F2A030E1213E2B780058C3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030E0213E2B780058C3E1 /* AppDelegate.swift */; };
-		F2A030E3213E2B780058C3E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030E2213E2B780058C3E1 /* ViewController.swift */; };
 		F2A030E6213E2B780058C3E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A030E4213E2B780058C3E1 /* Main.storyboard */; };
 		F2A030E9213E2B780058C3E1 /* ComprasUSA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2A030E7213E2B780058C3E1 /* ComprasUSA.xcdatamodeld */; };
 		F2A030EB213E2B7B0058C3E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A030EA213E2B7B0058C3E1 /* Assets.xcassets */; };
 		F2A030EE213E2B7B0058C3E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A030EC213E2B7B0058C3E1 /* LaunchScreen.storyboard */; };
+		F2A030F6213E3C8D0058C3E1 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030F5213E3C8D0058C3E1 /* ProductsTableViewController.swift */; };
+		F2A030F8213E3EEC0058C3E1 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030F7213E3EEC0058C3E1 /* UIViewController+CoreData.swift */; };
+		F2A030FA213F47CE0058C3E1 /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */; };
+		F2A030FC213F5D050058C3E1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */; };
+		F2A030FE213F872C0058C3E1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2A030FD213F872C0058C3E1 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F2A030DD213E2B780058C3E1 /* ComprasUSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComprasUSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A030E0213E2B780058C3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F2A030E2213E2B780058C3E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F2A030E5213E2B780058C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2A030E8213E2B780058C3E1 /* ComprasUSA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComprasUSA.xcdatamodel; sourceTree = "<group>"; };
 		F2A030EA213E2B7B0058C3E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2A030ED213E2B7B0058C3E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A030EF213E2B7B0058C3E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A030F5213E3C8D0058C3E1 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		F2A030F7213E3EEC0058C3E1 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
+		F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F2A030FD213F872C0058C3E1 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				F2A030E0213E2B780058C3E1 /* AppDelegate.swift */,
-				F2A030E2213E2B780058C3E1 /* ViewController.swift */,
 				F2A030E4213E2B780058C3E1 /* Main.storyboard */,
+				F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */,
+				F2A030FD213F872C0058C3E1 /* Settings.bundle */,
+				F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */,
+				F2A030F5213E3C8D0058C3E1 /* ProductsTableViewController.swift */,
+				F2A030F7213E3EEC0058C3E1 /* UIViewController+CoreData.swift */,
 				F2A030EA213E2B7B0058C3E1 /* Assets.xcassets */,
 				F2A030EC213E2B7B0058C3E1 /* LaunchScreen.storyboard */,
 				F2A030EF213E2B7B0058C3E1 /* Info.plist */,
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A030FE213F872C0058C3E1 /* Settings.bundle in Resources */,
 				F2A030EE213E2B7B0058C3E1 /* LaunchScreen.storyboard in Resources */,
 				F2A030EB213E2B7B0058C3E1 /* Assets.xcassets in Resources */,
 				F2A030E6213E2B780058C3E1 /* Main.storyboard in Resources */,
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A030E3213E2B780058C3E1 /* ViewController.swift in Sources */,
 				F2A030E9213E2B780058C3E1 /* ComprasUSA.xcdatamodeld in Sources */,
+				F2A030F8213E3EEC0058C3E1 /* UIViewController+CoreData.swift in Sources */,
+				F2A030FA213F47CE0058C3E1 /* ProductRegisterViewController.swift in Sources */,
+				F2A030F6213E3C8D0058C3E1 /* ProductsTableViewController.swift in Sources */,
 				F2A030E1213E2B780058C3E1 /* AppDelegate.swift in Sources */,
+				F2A030FC213F5D050058C3E1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
