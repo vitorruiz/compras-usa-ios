@@ -23,6 +23,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        txtDolar.addDoneCancelToolbar()
+        txtIOF.addDoneCancelToolbar()
+        
         loadStates()
         
         txtDolar.text = "\(UserDefaults.standard.value(forKey: KEY_DOLAR) as? Double ?? 0)"
@@ -63,12 +66,29 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        let statesCount = fetchedResultController.fetchedObjects?.count ?? 0
+        
+        if statesCount > 0 {
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine;
+            return 1
+        }
+        else {
+            let emptyLabel = UILabel(frame: CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height)))
+            emptyLabel.text = "Lista de estados vazia!"
+            emptyLabel.textColor = UIColor.black
+            emptyLabel.numberOfLines = 0;
+            emptyLabel.textAlignment = .center;
+            emptyLabel.font = UIFont(name: "TrebuchetMS", size: 18)
+            emptyLabel.sizeToFit()
+            
+            tableView.backgroundView = emptyLabel
+            tableView.separatorStyle = .none;
+            return 0;
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return fetchedResultController.fetchedObjects?.count ?? 0
     }
     
@@ -78,15 +98,15 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let state = fetchedResultController.object(at: indexPath)
         
         cell.textLabel?.text = state.name
-        cell.detailTextLabel?.text = state.tax.description
+        cell.detailTextLabel?.text = String(format: "U$ %.2f", state.tax)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let state = fetchedResultController.object(at: indexPath)
-        
         showAlertFor(state)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -112,11 +132,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         alert.addTextField { (textField) in
             textField.placeholder = "Nome"
+            textField.autocapitalizationType = .words
             textField.text = state?.name
         }
         alert.addTextField { (textField) in
             textField.placeholder = "Taxa"
-            textField.keyboardType = .numberPad
+            textField.keyboardType = .decimalPad
             textField.text = state?.tax.description
         }
         

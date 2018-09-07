@@ -17,6 +17,9 @@
 		F2A030FA213F47CE0058C3E1 /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */; };
 		F2A030FC213F5D050058C3E1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */; };
 		F2A030FE213F872C0058C3E1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F2A030FD213F872C0058C3E1 /* Settings.bundle */; };
+		F2A03100214206840058C3E1 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A030FF214206840058C3E1 /* TotalViewController.swift */; };
+		F2A0310221422DC90058C3E1 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0310121422DC80058C3E1 /* UITextField+Extension.swift */; };
+		F2A03104214232850058C3E1 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A03103214232850058C3E1 /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
 		F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F2A030FD213F872C0058C3E1 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F2A030FF214206840058C3E1 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
+		F2A0310121422DC80058C3E1 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		F2A03103214232850058C3E1 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +72,15 @@
 			children = (
 				F2A030E0213E2B780058C3E1 /* AppDelegate.swift */,
 				F2A030E4213E2B780058C3E1 /* Main.storyboard */,
+				F2A0310121422DC80058C3E1 /* UITextField+Extension.swift */,
 				F2A030FB213F5D050058C3E1 /* SettingsViewController.swift */,
 				F2A030FD213F872C0058C3E1 /* Settings.bundle */,
 				F2A030F9213F47CE0058C3E1 /* ProductRegisterViewController.swift */,
 				F2A030F5213E3C8D0058C3E1 /* ProductsTableViewController.swift */,
 				F2A030F7213E3EEC0058C3E1 /* UIViewController+CoreData.swift */,
+				F2A030FF214206840058C3E1 /* TotalViewController.swift */,
 				F2A030EA213E2B7B0058C3E1 /* Assets.xcassets */,
+				F2A03103214232850058C3E1 /* ProductTableViewCell.swift */,
 				F2A030EC213E2B7B0058C3E1 /* LaunchScreen.storyboard */,
 				F2A030EF213E2B7B0058C3E1 /* Info.plist */,
 				F2A030E7213E2B780058C3E1 /* ComprasUSA.xcdatamodeld */,
@@ -151,10 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A03100214206840058C3E1 /* TotalViewController.swift in Sources */,
 				F2A030E9213E2B780058C3E1 /* ComprasUSA.xcdatamodeld in Sources */,
+				F2A03104214232850058C3E1 /* ProductTableViewCell.swift in Sources */,
 				F2A030F8213E3EEC0058C3E1 /* UIViewController+CoreData.swift in Sources */,
 				F2A030FA213F47CE0058C3E1 /* ProductRegisterViewController.swift in Sources */,
 				F2A030F6213E3C8D0058C3E1 /* ProductsTableViewController.swift in Sources */,
+				F2A0310221422DC90058C3E1 /* UITextField+Extension.swift in Sources */,
 				F2A030E1213E2B780058C3E1 /* AppDelegate.swift in Sources */,
 				F2A030FC213F5D050058C3E1 /* SettingsViewController.swift in Sources */,
 			);
@@ -303,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534KGL59WS;
 				INFOPLIST_FILE = ComprasUSA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 534KGL59WS;
 				INFOPLIST_FILE = ComprasUSA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

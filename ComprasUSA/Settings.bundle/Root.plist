@@ -34,7 +34,7 @@
 			<key>DefaultValue</key>
 			<string>6.38</string>
 			<key>KeyboardType</key>
-			<string>NumbersAndPunctuation</string>
+			<string>NumberPad</string>
 		</dict>
 	</array>
 </dict>
