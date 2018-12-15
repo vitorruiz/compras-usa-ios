@@ -73,7 +73,8 @@ class ProductsTableViewController: UITableViewController {
         let product = fetchedResultController.object(at: indexPath)
         
         cell.lblName.text = product.name
-        cell.lblPrice.text = String(format: "U$ %.2f", product.price)
+        cell.lblPrice.text = "U$ \(product.price)"
+            //String(format: "U$ %.2f", product.price)
         cell.ivProduct.image = product.image as? UIImage
 
         return cell

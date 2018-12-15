@@ -49,18 +49,20 @@ class TotalViewController: UIViewController {
         var totalReal = 0.0
         
         for product in products {
-            totalDolar += product.price + product.state!.tax
+            totalDolar += (product.price + (product.price * (product.state!.tax/100)))
             
             if product.card {
-                totalReal += ((product.price + product.state!.tax) * dolarQuotation) * ((iof / 100) + 1)
+                totalReal += ((product.price + (product.price * (product.state!.tax/100))) * dolarQuotation) * ((iof / 100) + 1)
             }
             else {
-                totalReal += (product.price + product.state!.tax) * dolarQuotation
+                totalReal += ((product.price + (product.price * (product.state!.tax/100))) * dolarQuotation)
             }
         }
         
-        lblTotalReal.text = String(format: "R$ %.2f", totalReal)
-        lblTotalDolar.text = String(format: "U$ %.2f", totalDolar)
+        lblTotalReal.text = "R$ \(totalReal)"
+        //String(format: "R$ %.2f", totalReal)
+        lblTotalDolar.text = "U$ \(totalDolar)"
+        //String(format: "U$ %.2f", totalDolar)
     }
 }
 

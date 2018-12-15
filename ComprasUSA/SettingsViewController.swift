@@ -98,7 +98,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         let state = fetchedResultController.object(at: indexPath)
         
         cell.textLabel?.text = state.name
-        cell.detailTextLabel?.text = String(format: "U$ %.2f", state.tax)
+        cell.detailTextLabel?.text = "\(state.tax) %"
+            //String(format: "U$ %.2f", state.tax)
         
         return cell
     }
