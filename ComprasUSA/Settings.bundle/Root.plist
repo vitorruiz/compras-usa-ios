@@ -20,7 +20,7 @@
 			<key>Key</key>
 			<string>key_dolar</string>
 			<key>KeyboardType</key>
-			<string>NumberPad</string>
+			<string>NumbersAndPunctuation</string>
 			<key>DefaultValue</key>
 			<string>3.89</string>
 		</dict>
@@ -34,7 +34,7 @@
 			<key>DefaultValue</key>
 			<string>6.38</string>
 			<key>KeyboardType</key>
-			<string>NumberPad</string>
+			<string>NumbersAndPunctuation</string>
 		</dict>
 	</array>
 </dict>

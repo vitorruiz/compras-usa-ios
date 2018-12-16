@@ -22,6 +22,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDataSource, U
     
     var product: Product!
     var selectedState: State?
+    var imageSelected = false
     
     let pickerView = UIPickerView()
     
@@ -84,7 +85,7 @@ class ProductRegisterViewController: UIViewController, UIPickerViewDataSource, U
     
     @IBAction func saveProduct(_ sender: UIButton) {
         
-        guard let name = txtName.text, let txtPrice = txtPrice.text, let price = Double(txtPrice),let image = ivImage.image, selectedState != nil, !name.isEmpty, !txtPrice.isEmpty
+        guard let name = txtName.text, let txtPrice = txtPrice.text, let price = Double(txtPrice),let image = ivImage.image, selectedState != nil, !name.isEmpty, !txtPrice.isEmpty, imageSelected
             else {showMandatoryWarning(); return}
         
         if product == nil {
@@ -182,6 +183,7 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate, UINavi
             image.draw(in: CGRect(x: 0, y: 0, width: smallSize.width, height: smallSize.height))
             ivImage.image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
+            imageSelected = true
         }
         
         dismiss(animated: true, completion: nil)

@@ -28,8 +28,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         loadStates()
         
-        txtDolar.text = "\(UserDefaults.standard.value(forKey: KEY_DOLAR) as? Double ?? 0)"
-        txtIOF.text = "\(UserDefaults.standard.value(forKey: KEY_IOF) as? Double ?? 0)"
+        txtDolar.text = "\(UserDefaults.standard.double(forKey: KEY_DOLAR))"
+        txtIOF.text = "\(UserDefaults.standard.double(forKey: KEY_IOF))"
         
         txtDolar.addTarget(self, action: #selector(updateDolarSetting(_:)), for: UIControlEvents.editingChanged)
         
